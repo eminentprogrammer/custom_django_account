@@ -1,0 +1,32 @@
+<style>
+td{
+    color: dodgerblue l;
+    text-transform: uppercase;
+}
+.email{
+    text-transform:lowercase;
+}
+
+</style>
+
+<table class="table table-light table-bordered table-hover table-striped">
+    <tbody>
+        <div class="h3 text-center">Account Information</div>
+        <tr>
+            <th>Username:</th>
+            <td>{{request.user.username}} </td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td class="email"> {{request.user.email}} </td>
+        </tr>
+        <tr>
+            <th>Date joined:</th>
+            <td>{{request.user.date_joined}}</td>
+        </tr>
+        <tr>
+            <th>Contact:</th>
+            <td type="tel">{{request.user.phone_number}} </td>
+        </tr>
+    </tbody>
+</table>
